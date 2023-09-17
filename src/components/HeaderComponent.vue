@@ -43,10 +43,10 @@ import IconPhone from './icons/IconPhone.vue'
 </script>
 
 <style lang="scss" scoped>
- .background {
-    background: rgba(83, 141, 255, 0.05);
-    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.10);
- }
+//  .background {
+//     background: rgba(83, 141, 255, 0.05);
+//     box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.10);
+//  }
 
  .header {
     display: flex;
