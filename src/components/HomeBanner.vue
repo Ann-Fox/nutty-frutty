@@ -119,7 +119,7 @@ import IconSearch from './icons/IconSearch.vue';
   display: flex;
   justify-content: space-around;
   margin-top: 131px;
-  margin-bottom: 178px;
+  padding-bottom: 178px;
 
   &__left {
     display: flex;
@@ -157,14 +157,14 @@ import IconSearch from './icons/IconSearch.vue';
     &__search {
       // max-width: 631px;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     border-radius: 25px;
     background: #ffffff;
       &__input {
         background: none;
         border: none;
         color: #000;
-        font-family: DM Serif Display;
+        // font-family: DM Serif Display;
         font-size: 23.7px;
         font-style: normal;
         font-weight: 300;
@@ -172,7 +172,7 @@ import IconSearch from './icons/IconSearch.vue';
         letter-spacing: 1px;
         opacity: 0.65;
         padding-left: 29px;
-        padding-right: 205px;
+        padding-right: 268px;
       }
       &__btn {
         border-radius: 25px;
