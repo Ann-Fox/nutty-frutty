@@ -1,7 +1,9 @@
 <template>
     <div class="footer">
-<FooterItem />
-
+        <div>
+            
+        </div>
+        <FooterItem />
     </div>
 </template>
 

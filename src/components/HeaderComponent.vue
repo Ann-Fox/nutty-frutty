@@ -3,13 +3,13 @@
         <header class="header center">
         <div class="header__left">
             <div class="header__left__logo">
-                <LogoMain/>
+                <RouterLink to="/"><LogoMain/></RouterLink>
             </div>
             <nav class="header__left__nav">
                 <ul>
-                    <li>Главная</li>
+                    <li><RouterLink to="/">Главная</RouterLink></li>
                     <li>Каталог</li>
-                    <li>О нас</li>
+                    <li><RouterLink to="/about">О нас</RouterLink></li>
                     <li>О доставке</li>
                     <li>Магазины</li>
                     <li>Контакты</li>
@@ -37,8 +37,9 @@
 
 import LogoMain from './icons/LogoMain.vue';
 import IconPhone from './icons/IconPhone.vue'
+import { RouterLink } from 'vue-router';
     export default {
-    components: { LogoMain, IconPhone }
+    components: { LogoMain, IconPhone, RouterLink }
 }
 </script>
 
@@ -64,7 +65,7 @@ import IconPhone from './icons/IconPhone.vue'
             display: flex;
             gap: 41px;
 
-            color: rgba(0, 0, 0, 0.35);
+            // color: rgba(0, 0, 0, 0.35);
             font-size: 18px;
             font-style: normal;
             font-weight: 400;

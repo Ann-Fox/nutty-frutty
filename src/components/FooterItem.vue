@@ -1,5 +1,4 @@
 <template>
-    
     <div class="items" >
         <div class="item" v-for="numSection in numSections" :key="numSection">
             <h4>Раздел {{ numSection }}</h4>
@@ -27,14 +26,13 @@
                 <li>г. Пермь, ул. Красные Казармы, 64</li>
             </ul>
         </div>
-    </div>
-   
-       
+    </div>     
    
 </template>
 
 <script setup>
 import { ref } from 'vue';
+
 const products = [
     {
         section: 1,

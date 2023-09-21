@@ -2,29 +2,24 @@
   <div>
     <div class="bg">
       <HeaderComponent/>
-      <HomeBanner/>
     </div>
-    <RouterLink to="/">Home</RouterLink>
+    <router-view></router-view>
 
-<FooterComponent/>
+    <FooterComponent/>
   </div>
 </template>
 
 <script setup>
 
 import HeaderComponent from './components/HeaderComponent.vue';
-import HomeBanner from './components/HomeBanner.vue'
 import FooterComponent from './components/FooterComponent.vue'
-
-
 
 </script>
 
 <style lang="scss" scoped>
-.bg {
-  background: rgba(83, 141, 255, 0.05);;
-
-}
+// .bg {
+//   background: rgba(83, 141, 255, 0.05);;
+// }
 </style>
 <!-- <script setup>
 import { RouterLink, RouterView } from 'vue-router'
