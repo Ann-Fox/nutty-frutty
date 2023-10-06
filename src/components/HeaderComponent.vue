@@ -10,9 +10,9 @@
                     <li><RouterLink to="/">Главная</RouterLink></li>
                     <li>Каталог</li>
                     <li><RouterLink to="/about">О нас</RouterLink></li>
-                    <li>О доставке</li>
-                    <li>Магазины</li>
-                    <li>Контакты</li>
+                    <li><RouterLink to="/about-delivery">О доставке</RouterLink></li>
+                    <li><RouterLink to="/our-stores">Магазины</RouterLink></li>
+                    <li><RouterLink to="/contacts">Контакты</RouterLink></li>
                 </ul>
             </nav>
         </div>
