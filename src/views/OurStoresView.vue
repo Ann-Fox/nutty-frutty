@@ -1,5 +1,5 @@
 <template>
-  <div class="about center">
+  <div class="about center bg">
     <h2>Наши магазины</h2>
     <div class="store">
       <div class="store__item" v-for="store in stores" :key="store.id">
@@ -31,7 +31,7 @@ const stores = [
 
 <style lang="scss" scoped>
 .about {
-  margin: 42px 144px 143px;
+  padding: 42px 144px 143px;
   display: flex;
   flex-direction: column;
   align-items: center;

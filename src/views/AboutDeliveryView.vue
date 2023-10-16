@@ -1,5 +1,5 @@
 <template>
-  <div class="about center">
+  <div class="about center bg">
     <h2>О доставке</h2>
     <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
     </p>
@@ -14,7 +14,7 @@ import LogoMainBig from '../components/icons/LogoMainBig.vue';
 
 <style lang="scss" scoped>
 .about {
-  margin: 42px 144px 143px;
+  padding: 42px 144px 143px;
   display: flex;
   flex-direction: column;
   align-items: center;
