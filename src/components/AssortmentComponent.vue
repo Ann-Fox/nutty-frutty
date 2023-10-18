@@ -22,5 +22,7 @@ import AssortmentItem from './AssortmentItem.vue';
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 26px;
     grid-row-gap: 54px;
+
+    // margin: 100px 0;
 }
 </style>
