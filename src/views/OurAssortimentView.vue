@@ -3,24 +3,8 @@
     <h2>Наш ассортимент</h2>
 
     <div class="assortiment__all">
-      <aside class="sidebar">
-        <h4 class="sidebar__head">Категории</h4>
-        <ul>
-          <li>Сухофрукты экзотические</li>
-          <li>Ягоды сушеные </li>
-          <li>Цукаты</li>
-          <li>Восточные сладости</li>
-          <li>Снеки</li>
-          <li>Семена и бобовые</li>
-          <li>Бакалея</li>
-          <li>Цукаты</li>
-          <li>Восточные сладости</li>
-          <li>Снеки</li>
-          <li>Семена и бобовые</li>
-          <li>Бакалея</li>
-
-        </ul>
-      </aside>
+     
+      <SideBarComponent></SideBarComponent>
 
       <div class="main">
         <div class="main__top">
@@ -50,6 +34,7 @@
 </template>
 
 <script setup>
+import SideBarComponent from '../components/SideBarComponent.vue';
 import NumberPageComponent from '../components/NumberPageComponent.vue'
 import AssortmentItem from '../components/AssortmentItem.vue';
 import IconSearch from '../components/icons/IconSearch.vue';
@@ -63,52 +48,6 @@ import IconSearch from '../components/icons/IconSearch.vue';
     display: flex;
     gap: 59px;
     justify-content: space-between;
-  }
-}
-
-.sidebar {
-  border-radius: 25px;
-  background: rgba(83, 141, 255, 0.05);
-
-  padding: 28px 0 43px 46px;
-
-  width: 392px;
-  height: fit-content;
-
-  &__head {
-    color: #000;
-    // text-align: center;
-    font-size: 21.389px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.891px;
-
-    margin-bottom: 27px;
-  }
-
-  ul {
-    display: grid;
-    gap: 26px;
-  }
-
-  li {
-    color: #000;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 1px;
-  }
-
-  li:hover {
-    color: #FEB302;
-  }
-
-  li:active {
-    border-radius: 15px;
-    background: #FEB302;
-    color: #fff;
   }
 }
 
