@@ -56,7 +56,7 @@ import AssortmentItem from '../components/AssortmentItem.vue';
   flex-direction: column;
   align-items: center;
   max-width: 1632px;
-  gap: 35px;
+  gap: 98px;
 
   background: rgba(83, 141, 255, 0.05);
 }
@@ -159,7 +159,7 @@ input {
 }
 
 .assortiment {
-  margin: 178px auto 90px;
+  margin: 62px auto 90px;
 }
 
 .cards {
@@ -168,5 +168,8 @@ input {
   grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 26px;
   grid-row-gap: 54px;
+
+      margin: 100px 0;
+
 }
 </style>

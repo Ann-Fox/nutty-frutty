@@ -8,7 +8,8 @@
                             <li>
                                 <RouterLink to="/">Главная</RouterLink>
                             </li>
-                            <li>Каталог</li>
+                            <li><RouterLink to="/our-assortiment">Каталог</RouterLink>
+                                </li>
                             <li>
                                 <RouterLink to="/about">О нас</RouterLink>
                             </li>
@@ -29,12 +30,12 @@
                 </div>
                 <div class="header__rigth">
                     <div class="header__rigth__favorites">Избранное</div>
-                    <div class="header__rigth__basket">
-                        <RouterLink to="/basket" class="header__rigth__basket__text">Корзина</RouterLink>
+                    <RouterLink to="/basket" class="header__rigth__basket">
+                        <div class="header__rigth__basket__text">Корзина</div>
                         <div class="header__rigth__basket__count">
                             <p>3</p>
                         </div>
-                    </div>
+                    </RouterLink>
                 </div>
             </header>
         

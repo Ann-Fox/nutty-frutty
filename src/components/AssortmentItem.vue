@@ -35,7 +35,23 @@ import IconFaivorites from '../components/icons/IconFaivorites.vue'
 const products = [
     {
         id: 1,
-        imgUrl: '../public/images/assortiment/apricot.png',
+        imgUrl: '/images/assortiment/apricot.png',
+        name: 'Абрикосы сушеные',
+        description: 'Сушенные абрикосы',
+        priceNew: 322.00,
+        priceOld: 450.00,
+    },
+    {
+        id: 1,
+        imgUrl: '/images/assortiment/apricot.png',
+        name: 'Абрикосы сушеные',
+        description: 'Сушенные абрикосы',
+        priceNew: 322.00,
+        priceOld: 450.00,
+    },
+    {
+        id: 1,
+        imgUrl: '/images/assortiment/apricot.png',
         name: 'Абрикосы сушеные',
         description: 'Сушенные абрикосы',
         priceNew: 322.00,
@@ -51,7 +67,7 @@ const products = [
     },
     {
         id: 1,
-        imgUrl: '../public/images/assortiment/apricot.png',
+        imgUrl: '/images/assortiment/apricot.png',
         name: 'Абрикосы сушеные',
         description: 'Сушенные абрикосы',
         priceNew: 322.00,
@@ -59,7 +75,7 @@ const products = [
     },
     {
         id: 1,
-        imgUrl: '../public/images/assortiment/apricot.png',
+        imgUrl: '/images/assortiment/apricot.png',
         name: 'Абрикосы сушеные',
         description: 'Сушенные абрикосы',
         priceNew: 322.00,
@@ -67,7 +83,7 @@ const products = [
     },
     {
         id: 1,
-        imgUrl: '../public/images/assortiment/apricot.png',
+        imgUrl: '/images/assortiment/apricot.png',
         name: 'Абрикосы сушеные',
         description: 'Сушенные абрикосы',
         priceNew: 322.00,
@@ -75,23 +91,7 @@ const products = [
     },
     {
         id: 1,
-        imgUrl: '../public/images/assortiment/apricot.png',
-        name: 'Абрикосы сушеные',
-        description: 'Сушенные абрикосы',
-        priceNew: 322.00,
-        priceOld: 450.00,
-    },
-    {
-        id: 1,
-        imgUrl: '../public/images/assortiment/apricot.png',
-        name: 'Абрикосы сушеные',
-        description: 'Сушенные абрикосы',
-        priceNew: 322.00,
-        priceOld: 450.00,
-    },
-    {
-        id: 1,
-        imgUrl: '../public/images/assortiment/apricot.png',
+        imgUrl: '/images/assortiment/apricot.png',
         name: 'Абрикосы сушеные',
         description: 'Сушенные абрикосы',
         priceNew: 322.00,
