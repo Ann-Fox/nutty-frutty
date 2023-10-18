@@ -1,44 +1,45 @@
 <template>
     <div class="footer">
-      
-            <header class="header center">
-                <div class="header__left">
-                    <nav class="header__left__nav">
-                        <ul>
-                            <li>
-                                <RouterLink to="/">Главная</RouterLink>
-                            </li>
-                            <li><RouterLink to="/our-assortiment">Каталог</RouterLink>
-                                </li>
-                            <li>
-                                <RouterLink to="/about">О нас</RouterLink>
-                            </li>
-                            <li>
-                                <RouterLink to="/about-delivery">О доставке</RouterLink>
-                            </li>
-                             <li>
-                               Наша упаковка
-                            </li>
-                            <li>
-                                <RouterLink to="/our-stores">Магазины</RouterLink>
-                            </li>
-                            <li>
-                                <RouterLink to="/contacts">Контакты</RouterLink>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="header__rigth">
-                    <div class="header__rigth__favorites">Избранное</div>
-                    <RouterLink to="/basket" class="header__rigth__basket">
-                        <div class="header__rigth__basket__text">Корзина</div>
-                        <div class="header__rigth__basket__count">
-                            <p>3</p>
-                        </div>
-                    </RouterLink>
-                </div>
-            </header>
-        
+
+        <header class="header center">
+            <div class="header__left">
+                <nav class="header__left__nav">
+                    <ul>
+                        <li>
+                            <RouterLink to="/">Главная</RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/our-assortiment">Каталог</RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/about">О нас</RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/about-delivery">О доставке</RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/cart-product">Наша упаковка</RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/our-stores">Магазины</RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/contacts">Контакты</RouterLink>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__rigth">
+                <div class="header__rigth__favorites">Избранное</div>
+                <RouterLink to="/basket" class="header__rigth__basket">
+                    <div class="header__rigth__basket__text">Корзина</div>
+                    <div class="header__rigth__basket__count">
+                        <p>3</p>
+                    </div>
+                </RouterLink>
+            </div>
+        </header>
+
         <FooterItem />
     </div>
 </template>
