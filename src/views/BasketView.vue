@@ -20,6 +20,8 @@
       <div class="basket__order">
         <div class="basket__order__list-products">
           Ваш заказ
+          
+          <CartView></CartView>
 
         </div>
         <div class="basket__order__total">
@@ -45,6 +47,7 @@
 
 <script setup>
 import AssortmentItem from '../components/AssortmentItem.vue';
+import CartView from './CartView.vue';
 
 
 </script>
