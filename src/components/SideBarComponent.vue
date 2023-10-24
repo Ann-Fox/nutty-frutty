@@ -1,25 +1,65 @@
 <template>
-    <aside class="sidebar">
-        <h4 class="sidebar__head">Категории</h4>
-        <ul>
-          <li>Сухофрукты экзотические</li>
-          <li>Ягоды сушеные </li>
-          <li>Цукаты</li>
-          <li>Восточные сладости</li>
-          <li>Снеки</li>
-          <li>Семена и бобовые</li>
-          <li>Бакалея</li>
-          <li>Цукаты</li>
-          <li>Восточные сладости</li>
-          <li>Снеки</li>
-          <li>Семена и бобовые</li>
-          <li>Бакалея</li>
-
-        </ul>
-      </aside>
+  <aside class="sidebar">
+    <h4 class="sidebar__head">Категории</h4>
+    <ul>
+      <li v-for="category in categories" :key="category.id">{{ category.text }}</li>
+    </ul>
+  </aside>
 </template>
 
 <script setup>
+const categories = [
+  {
+    id: 1,
+    text: 'Сухофрукты экзотические'
+  },
+  {
+    id: 1,
+    text: 'Ягоды сушеные'
+  },
+  {
+    id: 1,
+    text: 'Цукаты'
+  },
+  {
+    id: 1,
+    text: 'Восточные сладости'
+  },
+  {
+    id: 1,
+    text: 'Снеки'
+  },
+  {
+    id: 1,
+    text: 'Семена и бобовые'
+  },
+  {
+    id: 1,
+    text: 'Бакалея'
+  },
+  {
+    id: 1,
+    text: 'Цукаты'
+  },
+  {
+    id: 1,
+    text: 'Восточные сладости'
+  },
+  {
+    id: 1,
+    text: 'Снеки'
+  },
+  {
+    id: 1,
+    text: 'Семена и бобовые'
+  },
+  {
+    id: 1,
+    text: 'Бакалея'
+  }
+  
+  
+]
 </script>
 
 <style lang="scss" scoped>
