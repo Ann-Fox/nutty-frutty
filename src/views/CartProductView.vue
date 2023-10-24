@@ -8,7 +8,7 @@
       <div class="cart">
 
         <div class="cart__image">
-          <img src="../../public/images/card-product.png" alt="Абрикосы сушеные">
+          <img src="/images/card-product.png" alt="Абрикосы сушеные">
           <div class="cart__image__weight">
             <p>100 г</p>
             <p>500 г</p>
@@ -17,9 +17,9 @@
         </div>
 
         <div class="cart__content">
-          <p class="cart__content__description">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
-            Lorem Ipsum является "рыбой" для текстов на латинице с начала XVI века.</p>
-          <p class="cart__content__price">322.00 Р</p>
+          <div class="cart__content__description">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+            Lorem Ipsum является "рыбой" для текстов на латинице с начала XVI века.</div>
+          <div class="cart__content__price">322.00 Р</div>
           <button>В корзину</button>
         </div>
 
