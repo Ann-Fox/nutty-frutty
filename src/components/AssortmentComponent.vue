@@ -1,8 +1,13 @@
 <template>
     <div class="assortiment center">
-        <h2>Наш ассортимент</h2>
+        <!-- <h2>Наш ассортимент</h2> -->
         <div class="cards">
-            <AssortmentItem></AssortmentItem>
+            <AssortmentItem v-for="product in products" :key="product.id" :url-product="product.imgUrl"
+                :name-product="product.name" 
+                :description-product="product.description" 
+                :price-product="product.priceNew"
+                :price-old-product="product.priceOld">
+            </AssortmentItem>
         </div>
 
     </div>
@@ -10,12 +15,95 @@
 
 <script setup>
 import AssortmentItem from './AssortmentItem.vue';
+
+const products = [
+    {
+        id: 1,
+        imgUrl: '/images/assortiment/apricot.png',
+        name: 'Абрикосы сушеные',
+        description: 'Сушенные абрикосы',
+        priceNew: 322.00,
+        priceOld: 450.00,
+        weight: 100,
+    },
+    {
+        id: 2,
+        imgUrl: '/images/assortiment/apricot.png',
+        name: 'Абрикосы сушеные',
+        description: 'Сушенные абрикосы',
+        priceNew: 323.00,
+        priceOld: 450.00,
+        weight: 100,
+
+    },
+    {
+        id: 3,
+        imgUrl: '/images/assortiment/apricot.png',
+        name: 'Абрикосы сушеные',
+        description: 'Сушенные абрикосы',
+        priceNew: 324.00,
+        priceOld: 450.00,
+        weight: 100,
+
+    },
+    {
+        id: 1,
+        imgUrl: '../public/images/assortiment/apricot.png',
+        name: 'Абрикосы сушеные',
+        description: 'Сушенные абрикосы',
+        priceNew: 322.00,
+        priceOld: 450.00,
+        weight: 100,
+
+    },
+    {
+        id: 1,
+        imgUrl: '/images/assortiment/apricot.png',
+        name: 'Абрикосы сушеные',
+        description: 'Сушенные абрикосы',
+        priceNew: 322.00,
+        priceOld: 450.00,
+        weight: 100,
+
+    },
+    {
+        id: 1,
+        imgUrl: '/images/assortiment/apricot.png',
+        name: 'Абрикосы сушеные',
+        description: 'Сушенные абрикосы',
+        priceNew: 322.00,
+        priceOld: 450.00,
+        weight: 100,
+
+    },
+    {
+        id: 1,
+        imgUrl: '/images/assortiment/apricot.png',
+        name: 'Абрикосы сушеные',
+        description: 'Сушенные абрикосы',
+        priceNew: 322.00,
+        priceOld: 450.00,
+        weight: 100,
+
+    },
+    {
+        id: 1,
+        imgUrl: '/images/assortiment/apricot.png',
+        name: 'Абрикосы сушеные',
+        description: 'Сушенные абрикосы',
+        priceNew: 322.00,
+        priceOld: 450.00,
+        weight: 100,
+
+    },
+]
 </script>
 
 <style lang="scss" scoped>
 .assortiment {
     margin: 178px auto 90px;
 }
+
 .cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

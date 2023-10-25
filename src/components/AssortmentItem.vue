@@ -1,15 +1,16 @@
 <template>
-    <div class="card bg" v-for="product in products" :key="product.id">
+    <div class="card bg">
+        <!-- <div class="card bg" v-for="product in products" :key="product.id"> -->
         <div class="card__img">
-            <img :src="product.imgUrl" :alt="product.name" />
+            <img :src="urlProduct" :alt="nameProduct" />
         </div>
         <div class="card__info">
-            <h4 class="card__info__head">{{ product.name }}</h4>
-            <p class="card__info__description">Свежие {{ product.description }}<br>
+            <h4 class="card__info__head">{{ nameProduct }}</h4>
+            <p class="card__info__description">Свежие {{ descriptionProduct }}<br>
                 в герметичной упаковке от фирмы</p>
             <div class="card__info__price">
-                <p class="card__info__price__new">От {{ product.priceNew }} P</p>
-                <p class="card__info__price__old">От {{ product.priceOld }} Р</p>
+                <p class="card__info__price__new">От {{ priceProduct }} P</p>
+                <p class="card__info__price__old">От {{ priceOldProduct }} Р</p>
             </div>
             <div class="card__info__btns">
                 <button>
@@ -21,83 +22,59 @@
                 <button>
                     <IconFaivorites></IconFaivorites>
                 </button>
-                <button>В корзину</button>
+                <button @click="addMe">В корзину</button>
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import { useCartStore } from '../stores/cart'
+
 import IconArrows from '../components/icons/IconArrows.vue'
 import IconSearchSmall from '../components/icons/IconSearchSmall.vue'
 import IconFaivorites from '../components/icons/IconFaivorites.vue'
 
-const products = [
-    {
-        id: 1,
-        imgUrl: '/images/assortiment/apricot.png',
-        name: 'Абрикосы сушеные',
-        description: 'Сушенные абрикосы',
-        priceNew: 322.00,
-        priceOld: 450.00,
+const props = defineProps({
+    urlProduct: {
+        type: String,
+        required: true
     },
-    {
-        id: 1,
-        imgUrl: '/images/assortiment/apricot.png',
-        name: 'Абрикосы сушеные',
-        description: 'Сушенные абрикосы',
-        priceNew: 322.00,
-        priceOld: 450.00,
+    nameProduct: {
+        type: String,
+        required: true
     },
-    {
-        id: 1,
-        imgUrl: '/images/assortiment/apricot.png',
-        name: 'Абрикосы сушеные',
-        description: 'Сушенные абрикосы',
-        priceNew: 322.00,
-        priceOld: 450.00,
+    descriptionProduct: {
+        type: String,
+        required: true
     },
-    {
-        id: 1,
-        imgUrl: '../public/images/assortiment/apricot.png',
-        name: 'Абрикосы сушеные',
-        description: 'Сушенные абрикосы',
-        priceNew: 322.00,
-        priceOld: 450.00,
+    priceProduct: {
+        type: Number,
+        required: true
     },
-    {
-        id: 1,
-        imgUrl: '/images/assortiment/apricot.png',
-        name: 'Абрикосы сушеные',
-        description: 'Сушенные абрикосы',
-        priceNew: 322.00,
-        priceOld: 450.00,
+    priceOldProduct: {
+        type: Number,
+        required: true
     },
-    {
-        id: 1,
-        imgUrl: '/images/assortiment/apricot.png',
-        name: 'Абрикосы сушеные',
-        description: 'Сушенные абрикосы',
-        priceNew: 322.00,
-        priceOld: 450.00,
-    },
-    {
-        id: 1,
-        imgUrl: '/images/assortiment/apricot.png',
-        name: 'Абрикосы сушеные',
-        description: 'Сушенные абрикосы',
-        priceNew: 322.00,
-        priceOld: 450.00,
-    },
-    {
-        id: 1,
-        imgUrl: '/images/assortiment/apricot.png',
-        name: 'Абрикосы сушеные',
-        description: 'Сушенные абрикосы',
-        priceNew: 322.00,
-        priceOld: 450.00,
-    },
-]
+    // weightProduct {
+    //     type: Number,
+    //     required: true
+    // },
+})
+// const showModal = ref(false)
+const qty = ref(0)
+
+const store = useCartStore()
+
+const addMe = () => {
+    store.add({
+        name: props.nameProduct,
+        price: props.priceProduct,
+        qty: qty.value
+    })
+    qty.value = 0
+}
 </script>
 
 <style lang="scss" scoped>
@@ -161,28 +138,28 @@ const products = [
             display: flex;
             justify-content: space-between;
 
-        & button {
-            border-radius: 13.368px;
-            // background-color: #F8F8F8;
-            background-color: #e6eaf3;
-            width: 55.254px;
-            height: 55.254px;
-
-            &:last-child {
-                background-color: #FEB302;
-                width: 184.477px;
+            & button {
+                border-radius: 13.368px;
+                // background-color: #F8F8F8;
+                background-color: #e6eaf3;
+                width: 55.254px;
                 height: 55.254px;
 
-                color: #FFF;
-                font-size: 21.389px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
-                letter-spacing: 0.891px;
+                &:last-child {
+                    background-color: #FEB302;
+                    width: 184.477px;
+                    height: 55.254px;
+
+                    color: #FFF;
+                    font-size: 21.389px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 0.891px;
+                }
             }
         }
-    }
 
-}
+    }
 }
 </style>

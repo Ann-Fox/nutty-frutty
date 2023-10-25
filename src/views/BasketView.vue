@@ -18,19 +18,19 @@
         </form>
       </div>
       <div class="basket__order">
-        <div class="basket__order__list-products">
-          Ваш заказ
-          
-          <CartView></CartView>
+    
 
-        </div>
-        <div class="basket__order__total">
+          <CartView>
+
+          </CartView>
+
+        <!-- <div class="basket__order__total">
           <p>Итого:</p>
-          <p>635 руб.</p>
+          <p>{{ total }} руб.</p>
         </div>
         <div class="basket__order__btn">
-        <button>Заказать</button>  
-        </div>
+          <button @click="showAndGo">Заказать</button>
+        </div> -->
       </div>
     </div>
 
@@ -39,16 +39,16 @@
   <div class="assortiment center">
     <h2>Похожие товары</h2>
     <div class="cards">
-      <AssortmentItem></AssortmentItem>
+      <AssortmentComponent></AssortmentComponent>
     </div>
 
   </div>
 </template>
 
 <script setup>
-import AssortmentItem from '../components/AssortmentItem.vue';
+import AssortmentComponent from '../components/AssortmentComponent.vue';
+// import AssortmentItem from '../components/AssortmentItem.vue';
 import CartView from './CartView.vue';
-
 
 </script>
 
@@ -88,57 +88,16 @@ import CartView from './CartView.vue';
 
     }
   }
-
   &__order {
     max-width: 532px;
 
-    &__list-products {
-      border-radius: 15px;
-      background: #FFF;
-      text-align: center;
-    }
-
-    &__total {
-      display: flex;
-      justify-content: space-between;
-      margin: 28px 0 50px;
-
-      & p {
-        color: #000;
-        font-size: 36px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        letter-spacing: 0.891px;
-      }
-
-      & p:last-child {
-        color: #FEB302;
-      }
-    }
-    
-    &__btn {
-      text-align: center;
-      
-      & button {
-        width: 350px;
-height: 55px;
-
-border-radius: 13.368px;
-background: #FEB302;
-
-color: #FFF;
-text-align: center;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-letter-spacing: 0.891px;
-      }
-    }
-  }
+    // &__list-products {
+    //   border-radius: 15px;
+    //   background: #FFF;
+    //   text-align: center;
+    // }
 }
-
+}
 
 
 input {
@@ -172,7 +131,7 @@ input {
   grid-column-gap: 26px;
   grid-row-gap: 54px;
 
-      margin: 100px 0;
+  margin: 100px 0;
 
 }
 </style>
