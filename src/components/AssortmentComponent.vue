@@ -1,11 +1,8 @@
 <template>
     <div class="assortiment center">
-        <!-- <h2>Наш ассортимент</h2> -->
         <div class="cards">
             <AssortmentItem v-for="product in products" :key="product.id" :url-product="product.imgUrl"
-                :name-product="product.name" 
-                :description-product="product.description" 
-                :price-product="product.priceNew"
+                :name-product="product.name" :description-product="product.description" :price-product="product.priceNew"
                 :price-old-product="product.priceOld">
             </AssortmentItem>
         </div>
@@ -110,7 +107,17 @@ const products = [
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 26px;
     grid-row-gap: 54px;
+}
 
-    // margin: 100px 0;
+@media (max-width: 425px) {
+    .assortiment {
+        margin: 31px auto 69px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 42px;
+    }
+
 }
 </style>

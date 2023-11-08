@@ -52,7 +52,6 @@ import FooterItem from './FooterItem.vue';
 <style lang="scss" scoped>
 .footer {
     margin-top: 40px;
-    // border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .header {
@@ -130,6 +129,12 @@ import FooterItem from './FooterItem.vue';
                 }
             }
         }
+    }
+}
+
+@media (max-width: 425px) {
+    .header {
+        display: none;
     }
 }
 </style>

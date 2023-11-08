@@ -84,7 +84,6 @@ const addMe = () => {
 
     &__img {
         margin-bottom: 23px;
-
     }
 
     &__info {
@@ -109,7 +108,6 @@ const addMe = () => {
         }
 
         &__price {
-            // font-family: Roboto;
             font-size: 16.041px;
             font-style: normal;
             line-height: 23.171px;
@@ -122,14 +120,12 @@ const addMe = () => {
             &__new {
                 color: #DA5C5C;
                 font-weight: 700;
-
             }
 
             &__old {
                 color: rgba(54, 54, 54, 0.25);
                 font-weight: 700;
                 text-decoration: line-through;
-
             }
         }
 
@@ -140,7 +136,6 @@ const addMe = () => {
 
             & button {
                 border-radius: 13.368px;
-                // background-color: #F8F8F8;
                 background-color: #e6eaf3;
                 width: 55.254px;
                 height: 55.254px;
@@ -160,6 +155,53 @@ const addMe = () => {
             }
         }
 
+    }
+}
+
+@media(max-width: 425px) {
+    .card {
+        border-radius: 26.736px;
+        padding: 11px 11px 22px;
+
+        &__img {
+            margin-bottom: 16px;
+
+            & img {
+                width: 285.187px;
+                height: 293.829px;
+            }
+        }
+
+        &__info {
+            &__head {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+
+            &__description {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+
+            &__price {
+                margin-bottom: 23px;
+            }
+
+            &__btns {
+                & button {
+                    border-radius: 13.368px;
+                    background-color: #e6eaf3;
+                    width: 42px;
+                    height: 42px;
+
+                    &:last-child {
+                        width: 138.577px;
+                        height: 42px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
     }
 }
 </style>

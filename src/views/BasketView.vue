@@ -18,19 +18,7 @@
         </form>
       </div>
       <div class="basket__order">
-    
-
-          <CartView>
-
-          </CartView>
-
-        <!-- <div class="basket__order__total">
-          <p>Итого:</p>
-          <p>{{ total }} руб.</p>
-        </div>
-        <div class="basket__order__btn">
-          <button @click="showAndGo">Заказать</button>
-        </div> -->
+        <CartView></CartView>
       </div>
     </div>
 
@@ -47,7 +35,6 @@
 
 <script setup>
 import AssortmentComponent from '../components/AssortmentComponent.vue';
-// import AssortmentItem from '../components/AssortmentItem.vue';
 import CartView from './CartView.vue';
 
 </script>
@@ -88,6 +75,7 @@ import CartView from './CartView.vue';
 
     }
   }
+
   &__order {
     max-width: 532px;
 
@@ -96,7 +84,7 @@ import CartView from './CartView.vue';
     //   background: #FFF;
     //   text-align: center;
     // }
-}
+  }
 }
 
 
@@ -132,6 +120,25 @@ input {
   grid-row-gap: 54px;
 
   margin: 100px 0;
+}
 
+@media(max-width: 425px) {
+  .about {
+    padding: 0 15px;
+    gap: 52px;
+  }
+
+  .basket {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  input {
+    width: 262px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 16px 0;
+  }
 }
 </style>

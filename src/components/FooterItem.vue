@@ -1,22 +1,23 @@
 <template>
-    <div class="items" >
+    <div class="items">
         <div class="item" v-for="numSection in numSections" :key="numSection">
             <h4>Раздел {{ numSection }}</h4>
             <div>
                 <svg width="61" height="1" viewBox="0 0 61 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line y1="0.5" x2="61" y2="0.5" stroke="black"/>
+                    <line y1="0.5" x2="61" y2="0.5" stroke="black" />
                 </svg>
             </div>
-            <ul >
-                <li v-bind="filterSection(numSection)" v-for="product in currentNum" :key="product.section">{{ product.nameProduct }}</li>
+            <ul>
+                <li v-bind="filterSection(numSection)" v-for="product in currentNum" :key="product.section">{{
+                    product.nameProduct }}</li>
             </ul>
         </div>
 
-         <div class="item contact">
+        <div class="item__contact">
             <h4>Контакты</h4>
             <div>
                 <svg width="61" height="1" viewBox="0 0 61 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line y1="0.5" x2="61" y2="0.5" stroke="black"/>
+                    <line y1="0.5" x2="61" y2="0.5" stroke="black" />
                 </svg>
             </div>
             <ul>
@@ -26,8 +27,7 @@
                 <li>г. Пермь, ул. Красные Казармы, 64</li>
             </ul>
         </div>
-    </div>     
-   
+    </div>
 </template>
 
 <script setup>
@@ -101,41 +101,66 @@ const currentNum = ref([products[0]]);
 const numSections = [1, 2, 3];
 
 const filterSection = (numSection) => {
-currentNum.value = products.filter((el) => el.section === numSection)
+    currentNum.value = products.filter((el) => el.section === numSection)
 }
 </script>
 
 <style lang="scss" scoped>
-    .items {
-        display: flex;
-        justify-content: space-evenly;
-        padding-top: 45px;
-        padding-bottom: 75px;
+.items {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 45px;
+    padding-bottom: 75px;
+}
+
+h4 {
+    color: #000;
+    font-size: 27.425px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.item {
+    & ul {
+        gap: 17px;
+        display: grid;
+        padding-top: 18px;
     }
 
-    h4 {
-        color: #000;
-        font-size: 27.425px;
+    & li {
+        color: #252525;
+        font-size: 20.569px;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+.item__contact {
+    & ul {
+        gap: 17px;
+        display: grid;
+        padding-top: 18px;
+    }
+
+    & li {
+        color: #252525;
+        font-size: 20.569px;
+        font-style: normal;
+        font-weight: 500;
         line-height: normal;
     }
 
+    li {
+        font-weight: 500;
+    }
+}
+
+
+@media(max-width: 425px) {
     .item {
-        & ul {
-            gap: 17px;
-            display: grid;
-            padding-top: 18px;
-        }
-        & li {
-            color: #252525;
-            font-size: 20.569px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-        }
+        display: none;
     }
-    .contact li {
-      font-weight: 500;
-    }
+}
 </style>

@@ -51,18 +51,44 @@ const stores = [
 
 .store__item {
   display: flex;
-    gap: 76px;
+  gap: 76px;
 
   &__img {
     width: 493px;
-height: 300px;
+    height: 300px;
 
-border-radius: 25px;
-background: #C4C4C4;
+    border-radius: 25px;
+    background: #C4C4C4;
   }
 
   &__content {
     width: 1024px;
+  }
+}
+
+@media(max-width: 425px) {
+  .about {
+    padding: 0 15px;
+    gap: 0;
+  }
+
+  .store {
+    margin: 30px 0 60px;
+  }
+
+  .store__item {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__img {
+      width: 253px;
+      height: 154px;
+    }
+
+    &__content {
+      width: 293px;
+    }
   }
 }
 </style>

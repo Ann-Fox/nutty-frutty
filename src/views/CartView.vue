@@ -10,7 +10,7 @@ const total = computed(() => {
   let t = 0
 
   store.items.forEach((item) => {
-    t += Math.round(item.price * item.qty * 100) / 100
+    t += Math.round(item.price * 100) / 100
   })
 
   return t
@@ -58,28 +58,17 @@ const showAndGo = () => {
 </template>
 
 <style lang="scss" scoped>
-// .cart__head {
-//   display: grid;
-//   grid-template-columns: 2fr repeat(2, 1fr) 2fr;
-//   grid-template-rows: 1fr;
-//   grid-column-gap: 40px;
-//   grid-row-gap: 0px;
-// }
-
 .cart__items {
   margin-top: 14px;
 }
 
 .basket {
   &__order {
-    // max-width: 532px;
-
     &__list-products {
       border-radius: 15px;
       background: #FFF;
       text-align: center;
       padding: 15px 30px 100px;
-
     }
 
     &__total {
@@ -123,34 +112,27 @@ const showAndGo = () => {
   }
 }
 
+@media(max-width: 425px) {
 
-// .cart__total {
-//   display: flex;
-//   margin: 20px 115px 50px 345px;
-//   justify-content: space-between;
-//   border-top: 1px solid #fff;
-// }
+  .basket {
+    &__order {
 
-// .cart__button {
-//   margin-right: 50px;
-//   margin-bottom: 20px;
-//   display: flex;
-//   gap: 20px;
-//   justify-content: flex-end;
-// }
+      &__list-products {
+        max-width: 280px;
+        padding: 33px 6px;
+      }
 
-// .cart__button button {
-//   color: #00bd7e;
-//   background: none;
-//   padding: 10px 40px;
-//   border: 1px solid #00bd7e;
-//   cursor: pointer;
-// }
+      &__total {
+        margin: 28px 0 40px;
+        flex-direction: column;
+      }
 
-// .cart__button button:hover {
-//   color: #181818;
-//   background: #00bd7e;
-//   border: 1px solid #00bd7e;
-//   cursor: pointer;
-// }
+      &__btn {
+        & button {
+          width: 274px;
+        }
+      }
+    }
+  }
+}
 </style>

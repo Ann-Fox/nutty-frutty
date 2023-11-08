@@ -21,7 +21,7 @@ defineProps({
     type: Number,
     required: true
   },
-  
+
 })
 const store = useCartStore()
 </script>
@@ -69,6 +69,12 @@ const store = useCartStore()
       color: red;
       padding: 0 15px;
     }
+  }
+}
+
+@media(max-width: 425px) {
+  .cart__item {
+    grid-template-columns: 1fr;
   }
 }
 </style>

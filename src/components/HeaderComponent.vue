@@ -12,8 +12,9 @@
                         <li>
                             <RouterLink to="/">Главная</RouterLink>
                         </li>
-                        <li><RouterLink to="/our-assortiment">Каталог</RouterLink>
-                            </li>
+                        <li>
+                            <RouterLink to="/our-assortiment">Каталог</RouterLink>
+                        </li>
                         <li>
                             <RouterLink to="/about">О нас</RouterLink>
                         </li>
@@ -57,11 +58,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-//  .background {
-//     background: rgba(83, 141, 255, 0.05);
-//     box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.10);
-//  }
-
 .header {
     display: flex;
     padding-top: 61px;
@@ -94,12 +90,15 @@ export default {
         &__phone {
             display: flex;
             gap: 10px;
+            align-items: center;
 
-            color: #606060;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
+            p {
+                color: #606060;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
         }
 
         &__favorites {
@@ -125,7 +124,6 @@ export default {
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
-
             }
 
             &__count {
@@ -144,6 +142,46 @@ export default {
                     font-weight: 700;
                     line-height: normal;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .header {
+        padding-top: 11px;
+        padding-bottom: 30px;
+
+        &__left {
+            display: flex;
+            gap: 27px;
+            align-items: center;
+
+            &__logo {
+                width: 76px;
+                height: 26px;
+            }
+
+            &__nav ul {
+                display: none;
+            }
+        }
+
+        &__rigth {
+            display: flex;
+            gap: 41px;
+            align-items: center;
+
+            &__phone p {
+                font-size: 12px;
+            }
+
+            &__favorites {
+                display: none;
+            }
+
+            &__basket {
+                display: none;
             }
         }
     }

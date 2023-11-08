@@ -5,3 +5,12 @@
             fill="#AAAAAA" />
     </svg>
 </template>
+
+<style lang="scss" scoped>
+@media(max-width: 425px) {
+    svg {
+        width: 14px;
+        height: 15px;
+    }
+}
+</style>
