@@ -8,7 +8,7 @@
                 </svg>
             </div>
             <ul>
-                <li v-bind="filterSection(numSection)" v-for="product in currentNum" :key="product.section">{{
+                <li v-for="product in filterSection(numSection)" :key="product.section">{{
                     product.nameProduct }}</li>
             </ul>
         </div>
@@ -31,7 +31,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+// import { ref } from 'vue';
 
 const products = [
     {
@@ -96,12 +96,12 @@ const products = [
     },
 ];
 
-const currentNum = ref([products[0]]);
+// const currentNum = ref([products[0]]);
 
 const numSections = [1, 2, 3];
 
 const filterSection = (numSection) => {
-    currentNum.value = products.filter((el) => el.section === numSection)
+    return products.filter((el) => el.section === numSection)
 }
 </script>
 
