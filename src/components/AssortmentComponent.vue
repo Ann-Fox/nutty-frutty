@@ -16,7 +16,7 @@ import AssortmentItem from './AssortmentItem.vue';
 const products = [
     {
         id: 1,
-        imgUrl: '/public/images/assortiment/apricot.png',
+        imgUrl: '/nutty-frutty/images/assortiment/apricot.png',
         name: 'Абрикосы',
         description: 'Абрикосы',
         priceNew: 322.00,
@@ -35,7 +35,7 @@ const products = [
     },
     {
         id: 3,
-        imgUrl: '/images/assortiment/apricot.png',
+        imgUrl: '/nutty-frutty/images/assortiment/apricot.png',
         name: 'Абрикосы сушеные',
         description: 'Сушенные абрикосы',
         priceNew: 324.00,
@@ -45,7 +45,7 @@ const products = [
     },
     {
         id: 1,
-        imgUrl: '/images/assortiment/apricot.png',
+        imgUrl: '/nutty-frutty/images/assortiment/apricot.png',
         name: 'Абрикосы сушеные',
         description: 'Сушенные абрикосы',
         priceNew: 322.00,
@@ -55,7 +55,7 @@ const products = [
     },
     {
         id: 1,
-        imgUrl: '/images/assortiment/apricot.png',
+        imgUrl: '/nutty-frutty/images/assortiment/apricot.png',
         name: 'Абрикосы сушеные',
         description: 'Сушенные абрикосы',
         priceNew: 322.00,
@@ -65,7 +65,7 @@ const products = [
     },
     {
         id: 1,
-        imgUrl: '/images/assortiment/apricot.png',
+        imgUrl: '/nutty-frutty/images/assortiment/apricot.png',
         name: 'Абрикосы сушеные',
         description: 'Сушенные абрикосы',
         priceNew: 322.00,
@@ -75,7 +75,7 @@ const products = [
     },
     {
         id: 1,
-        imgUrl: '/images/assortiment/apricot.png',
+        imgUrl: '/nutty-frutty/images/assortiment/apricot.png',
         name: 'Абрикосы сушеные',
         description: 'Сушенные абрикосы',
         priceNew: 322.00,
@@ -85,7 +85,7 @@ const products = [
     },
     {
         id: 1,
-        imgUrl: '/images/assortiment/apricot.png',
+        imgUrl: '/nutty-frutty/images/assortiment/apricot.png',
         name: 'Абрикосы сушеные',
         description: 'Сушенные абрикосы',
         priceNew: 322.00,
