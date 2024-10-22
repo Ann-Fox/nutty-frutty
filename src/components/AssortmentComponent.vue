@@ -25,7 +25,7 @@ const products = [
     },
     {
         id: 2,
-        imgUrl: '/images/assortiment/apricot.png',
+        imgUrl: '/nutty-frutty/images/assortiment/apricot.png',
         name: 'Абрикосы сушеные',
         description: 'Сушенные абрикосы',
         priceNew: 323.00,
