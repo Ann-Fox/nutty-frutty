@@ -16,11 +16,11 @@ import AssortmentItem from './AssortmentItem.vue';
 const products = [
     {
         id: 1,
-        imgUrl: 'src/assets/img/apricot.png',
-        name: 'Абрикосы сушеные',
-        description: 'Сушенные абрикосы',
+        imgUrl: '/public/images/assortiment/apricot.png',
+        name: 'Абрикосы',
+        description: 'Абрикосы',
         priceNew: 322.00,
-        priceOld: 650.00,
+        priceOld: 770.00,
         weight: 100,
     },
     {
