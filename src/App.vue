@@ -1,12 +1,12 @@
 <template>
-  <!-- <div> -->
+  <div>
     <div class="bg">
       <HeaderComponent/>
     </div>
     <!-- <router-view></router-view>
 
-    <FooterComponent/>
-  </div> -->
+    <FooterComponent/>-->
+   </div>
 </template>
 
 <script setup>
@@ -16,10 +16,10 @@ import HeaderComponent from './components/HeaderComponent.vue';
 
 </script>
 
-<style lang="scss" scoped>
-// .bg {
-//   background: rgba(83, 141, 255, 0.05);;
-// }
+<style lang="scss">
+.bg {
+  background: rgba(83, 141, 255, 0.05);
+}
 </style>
 <!-- <script setup>
 import { RouterLink, RouterView } from 'vue-router'

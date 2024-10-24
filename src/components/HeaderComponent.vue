@@ -1,47 +1,45 @@
 <template>
-    <div class="background">
-        <header class="header center">
-            <div class="header__left">
-                <div class="header__left__logo">
-                    <RouterLink to="/">
-                        <LogoMain />
-                    </RouterLink>
-                </div>
-                <nav class="header__left__nav visible__nav">
-                    <ul v-for="itemLink of navLink" :key="itemLink.name">
-                        <li>
-                            <RouterLink :to="itemLink.link">{{ itemLink.name }}</RouterLink>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
-
-            <div class="header__rigth__phone">
-                <IconPhone class="header__rigth__phone__size" />
-                <p>+7(912) 123 85-65</p>
-            </div>
-
-            <IconMenuBar class="visible__icon-menu"></IconMenuBar>
-
-            <div class="header__rigth visible__rigth">
-                <div class="header__rigth__favorites">Избранное</div>
-                <RouterLink to="/basket" class="header__rigth__basket">
-                    <div class="header__rigth__basket__text">Корзина</div>
-                    <div class="header__rigth__basket__count">
-                        <p>3</p>
-                    </div>
+    <div class="header">
+        <div class="header__left">
+            <div class="header__left__logo">
+                <RouterLink to="/">
+                    <LogoMain />
                 </RouterLink>
             </div>
-        </header>
+            <nav class="header__left__nav visible__nav">
+                <ul>
+                    <li v-for="itemLink of navLink" :key="itemLink.name">
+                        <RouterLink :to="itemLink.link">{{ itemLink.name }}</RouterLink>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header__rigth__phone">
+            <IconPhone class="header__rigth__phone__size" />
+            <p>+7(912) 123 85-65</p>
+        </div>
+
+        <IconMenuBar class="visible__icon-menu"></IconMenuBar>
+
+        <div class="header__rigth visible__rigth">
+            <div class="header__rigth__favorites">Избранное</div>
+            <RouterLink to="/basket" class="header__rigth__basket">
+                <div class="header__rigth__basket__text">Корзина</div>
+                <div class="header__rigth__basket__count">
+                    <p>3</p>
+                </div>
+            </RouterLink>
+        </div>
     </div>
 </template>
 
 <script setup>
 import LogoMain from './icons/LogoMain.vue';
 import IconPhone from './icons/IconPhone.vue'
-import { RouterLink } from 'vue-router';
 import IconMenuBar from './icons/IconMenuBar.vue';
+
+import { RouterLink } from 'vue-router';
 
 const navLink = [
     { name: 'Главная', link: '/' },
@@ -55,138 +53,6 @@ const navLink = [
 </script>
 
 <style lang="scss" scoped>
-// .visible {
-//     display: none;
-// }
-// .header {
-//     display: flex;
-//     padding-top: 61px;
-//     padding-bottom: 47px;
-//     justify-content: space-between;
-//     align-items: center;
-
-//     &__left {
-//         display: flex;
-//         gap: 27px;
-//         align-items: center;
-
-//         &__nav ul {
-//             display: flex;
-//             gap: 41px;
-
-//             // color: rgba(0, 0, 0, 0.35);
-//             font-size: 18px;
-//             font-style: normal;
-//             font-weight: 400;
-//             line-height: normal;
-//         }
-//     }
-
-//     &__rigth {
-//         display: flex;
-//         gap: 41px;
-//         align-items: center;
-
-//         &__phone {
-//             display: flex;
-//             gap: 10px;
-//             align-items: center;
-
-//             p {
-//                 color: #606060;
-//                 font-size: 18px;
-//                 font-style: normal;
-//                 font-weight: 700;
-//                 line-height: normal;
-//             }
-//         }
-
-//         &__favorites {
-//             color: #606060;
-//             font-size: 18px;
-//             font-style: normal;
-//             font-weight: 700;
-//             line-height: normal;
-//         }
-
-//         &__basket {
-//             display: flex;
-//             border-radius: 13.368px;
-//             background: rgba(254, 179, 2, 0.45);
-//             width: 149px;
-//             height: 53px;
-//             justify-content: space-around;
-//             align-items: center;
-
-//             &__text {
-//                 color: #FFF;
-//                 font-size: 18px;
-//                 font-style: normal;
-//                 font-weight: 700;
-//                 line-height: normal;
-//             }
-
-//             &__count {
-//                 width: 38px;
-//                 height: 39px;
-//                 border-radius: 10px;
-//                 background: #FFF;
-//                 align-items: center;
-//                 display: flex;
-//                 justify-content: center;
-
-//                 & p {
-//                     color: #444;
-//                     font-size: 18px;
-//                     font-style: normal;
-//                     font-weight: 700;
-//                     line-height: normal;
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// @media (min-width: 1280px) {
-//     .header {
-//         padding-top: 11px;
-//         padding-bottom: 30px;
-
-//         &__left {
-//             display: flex;
-//             gap: 27px;
-//             align-items: center;
-
-//             &__logo {
-//                 width: 76px;
-//                 height: 26px;
-//             }
-
-//             &__nav ul {
-//                 display: none;
-//             }
-//         }
-
-//         &__rigth {
-//             display: flex;
-//             gap: 41px;
-//             align-items: center;
-
-//             &__phone p {
-//                 font-size: 12px;
-//             }
-
-//             &__favorites {
-//                 display: none;
-//             }
-
-//             &__basket {
-//                 display: none;
-//             }
-//         }
-//     }
-// }
-
 .visible {
 
     &__nav,
@@ -202,22 +68,6 @@ const navLink = [
     justify-content: space-between;
     align-items: center;
     padding: 10px 0 30px;
-    // padding-bottom: 30px;
-
-    // &__left {
-    //     display: flex;
-    //     gap: 27px;
-    //     align-items: center;
-
-    //     &__logo {
-    //         width: 76px;
-    //         height: 26px;
-    //     }
-
-    //     &__nav ul {
-    //         display: none;
-    //     }
-    // }
 
     &__rigth {
         &__phone {
@@ -236,98 +86,138 @@ const navLink = [
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
+                font-size: 12px;
+                line-height: 24.5px;
             }
         }
     }
 }
 
-// @media (min-width: 1280px) {
-//     .header {
-//     display: flex;
-//     padding-top: 61px;
-//     padding-bottom: 47px;
-//     justify-content: space-between;
-//     align-items: center;
+@media (min-width: 1024px) {
+    .visible {
 
-//     &__left {
-//         display: flex;
-//         gap: 27px;
-//         align-items: center;
+        &__nav,
+        &__rigth {
+            display: flex;
+        }
 
-//         &__nav ul {
-//             display: flex;
-//             gap: 41px;
+        &__icon-menu {
+            display: none;
+        }
+    }
 
-//             // color: rgba(0, 0, 0, 0.35);
-//             font-size: 18px;
-//             font-style: normal;
-//             font-weight: 400;
-//             line-height: normal;
-//         }
-//     }
+    .header {
+        &__left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
 
-//     &__rigth {
-//         display: flex;
-//         gap: 41px;
-//         align-items: center;
+            &__nav ul {
+                display: flex;
+                gap: 10px;
+                color: rgba(0, 0, 0, 0.35);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
 
-//         &__phone {
-//             display: flex;
-//             gap: 10px;
-//             align-items: center;
+        &__rigth {
+            display: flex;
+            gap: 20px;
+            align-items: center;
 
-//             p {
-//                 color: #606060;
-//                 font-size: 18px;
-//                 font-style: normal;
-//                 font-weight: 700;
-//                 line-height: normal;
-//             }
-//         }
+            &__favorites {
+                color: #606060;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
 
-//         &__favorites {
-//             color: #606060;
-//             font-size: 18px;
-//             font-style: normal;
-//             font-weight: 700;
-//             line-height: normal;
-//         }
+            &__basket {
+                display: flex;
+                gap: 10px;
+                border-radius: 8px;
+                background: rgba(254, 179, 2, 0.45);
+                padding: 5px 10px;
+                justify-content: space-around;
+                align-items: center;
 
-//         &__basket {
-//             display: flex;
-//             border-radius: 13.368px;
-//             background: rgba(254, 179, 2, 0.45);
-//             width: 149px;
-//             height: 53px;
-//             justify-content: space-around;
-//             align-items: center;
+                &__text {
+                    color: #FFF;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
 
-//             &__text {
-//                 color: #FFF;
-//                 font-size: 18px;
-//                 font-style: normal;
-//                 font-weight: 700;
-//                 line-height: normal;
-//             }
+                &__count {
+                    padding: 4px 8px;
+                    border-radius: 8px;
+                    background: #FFF;
+                    align-items: center;
+                    display: flex;
+                    justify-content: center;
 
-//             &__count {
-//                 width: 38px;
-//                 height: 39px;
-//                 border-radius: 10px;
-//                 background: #FFF;
-//                 align-items: center;
-//                 display: flex;
-//                 justify-content: center;
+                    & p {
+                        color: #444;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+    }
+}
 
-//                 & p {
-//                     color: #444;
-//                     font-size: 18px;
-//                     font-style: normal;
-//                     font-weight: 700;
-//                     line-height: normal;
-//                 }
-//             }
-//         }
-//     }
-// }
-// }</style>
+@media (min-width: 1280px) {
+    .header {
+        &__left {
+            &__nav ul {
+                font-size: 18px;
+            }
+        }
+
+        &__rigth {
+            gap: 30px;
+
+            &__phone {
+            gap: 5px;
+            font-size: 16px;
+
+            &__size {
+                width: 16px;
+                height: 16px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+            &__favorites {
+                font-size: 18px;
+            }
+
+            &__basket {
+                padding: 7px 12px;
+
+                &__text {
+                    font-size: 18px;
+                }
+
+                &__count {
+                    padding: 6px 10px;
+
+                    & p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+</style>

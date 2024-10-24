@@ -5,25 +5,25 @@
   padding: 0;
 }
 
-#app {
-  max-width: 1920px;
-  margin: 0 auto;
-}
+#app { 
+  max-width: 1920px; 
+   margin: 0 auto;
+ }
 
 body {
   font-family: 'Roboto', sans-serif;
 }
 
-.center {
+/* .center {
   padding-left: calc(50% - 860px);
   padding-right: calc(50% - 860px);
-}
+} */
 
 .bg {
   background: rgba(83, 141, 255, 0.05);
 }
 
-h2 {
+/* h2 {
   color: #343030;
   text-align: center;
   font-size: 72px;
@@ -31,7 +31,7 @@ h2 {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 1px;
-}
+} */
 
 a {
   text-decoration: none;
@@ -65,23 +65,23 @@ button {
   cursor: pointer;
 }
 
-@media(max-width: 425px) {
-  #app {
+/* @media(max-width: 425px) { */
+  /* #app {
     max-width: 320px;
-  }
+  } */
 
-  .center {
+  /* .center {
     padding-left: calc(50% - 160px);
     padding-right: calc(50% - 160px);
-  }
+  } */
 
-  h2 {
+  /* h2 {
     font-size: 36px;
-  }
+  } */
 
-  p {
-    font-size: 12px;
-    line-height: 24.5px;
+  /* p { */
+    /* font-size: 12px;
+    line-height: 24.5px; */
     /* 204.167% */
-  }
-}
+  /* } */
+/* } */
