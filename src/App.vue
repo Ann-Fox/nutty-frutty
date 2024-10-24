@@ -1,18 +1,18 @@
 <template>
-  <div>
+  <!-- <div> -->
     <div class="bg">
       <HeaderComponent/>
     </div>
-    <router-view></router-view>
+    <!-- <router-view></router-view>
 
     <FooterComponent/>
-  </div>
+  </div> -->
 </template>
 
 <script setup>
 
 import HeaderComponent from './components/HeaderComponent.vue';
-import FooterComponent from './components/FooterComponent.vue'
+// import FooterComponent from './components/FooterComponent.vue'
 
 </script>
 
