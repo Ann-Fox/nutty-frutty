@@ -1,7 +1,7 @@
 <template>
     <div class="footer">
 
-        <header class="header center">
+        <!-- <header class="header center">
             <div class="header__left">
                 <nav class="header__left__nav">
                     <ul>
@@ -38,7 +38,7 @@
                     </div>
                 </RouterLink>
             </div>
-        </header>
+        </header> -->
 
         <FooterItem />
     </div>
