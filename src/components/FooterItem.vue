@@ -33,10 +33,10 @@
 <script setup>
 // import { ref } from 'vue';
 const contacts = [
-    { img: '/nutty-frutty/public/images/icons/phone-call.svg', adress: '8 912 323 31 55' },
-    { img: '/nutty-frutty/public/images/icons/phone-call.svg', adress: '8 913 313 31 85' },
-    { img: '/nutty-frutty/public/images/icons/mail.svg', adress: 'nutty-frutty@gmail.com' },
-    { img: '/nutty-frutty/public/images/icons/maps-and-flags.svg', adress: 'г. Пермь, ул. Красные Казармы, 64' },
+    { img: 'src/assets/img/icons/phone-call.svg', adress: '8 912 323 31 55' },
+    { img: 'src/assets/img/icons/phone-call.svg', adress: '8 913 313 31 85' },
+    { img: 'src/assets/img/icons/mail.svg', adress: 'nutty-frutty@gmail.com' },
+    { img: 'src/assets/img/icons/maps-and-flags.svg', adress: 'г. Пермь, ул. Красные Казармы, 64' },
 ]
 const products = [
     {
@@ -112,8 +112,9 @@ const filterSection = (numSection) => {
 
 <style lang="scss" scoped>
 .items {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
+    padding: 25px 0 45px 0;
 
     h4 {
         color: #000;
@@ -152,83 +153,61 @@ const filterSection = (numSection) => {
 }
 
 
-@media(max-width: 1024px) {
-.items {
-    display: flex;
-&__item {
-    display: flex;
-    flex-direction: column;
-    & ul {
-        gap: 17px;
-        display: grid;
-        padding-top: 18px;
-    }
+@media(min-width: 1024px) {
+    .items {
+        display: flex;
+        justify-content: space-between;
+        padding: 45px 0 75px 0;
 
-    & li {
-        color: #252525;
-        font-size: 20.569px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+
+            & ul {
+                gap: 10px;
+                display: grid;
+                padding-top: 16px;
+            }
+
+            & li {
+                color: #252525;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
     }
-}}
 }
 
+@media(min-width: 1280px) {
+    .items {
+        h4 {
+            font-size: 27px;
+        }
 
-// .items {
-//     display: flex;
-//     justify-content: space-evenly;
-//     padding-top: 45px;
-//     padding-bottom: 75px;
-// }
+        &__item {
+            & ul {
+                gap: 17px;
+                padding-top: 18px;
+            }
 
-// h4 {
-//     color: #000;
-//     font-size: 27.425px;
-//     font-style: normal;
-//     font-weight: 700;
-//     line-height: normal;
-// }
+            & li {
+                font-size: 20px;
+            }
+        }
 
-// .item {
-//     & ul {
-//         gap: 17px;
-//         display: grid;
-//         padding-top: 18px;
-//     }
+        &__contact {
+            & ul {
+                gap: 17px;
+                padding-top: 18px;
+            }
 
-//     & li {
-//         color: #252525;
-//         font-size: 20.569px;
-//         font-style: normal;
-//         font-weight: 400;
-//         line-height: normal;
-//     }
-// }
-
-// .item__contact {
-//     & ul {
-//         gap: 17px;
-//         display: grid;
-//         padding-top: 18px;
-//     }
-
-//     & li {
-//         color: #252525;
-//         font-size: 20.569px;
-//         font-style: normal;
-//         font-weight: 500;
-//         line-height: normal;
-//     }
-
-//     li {
-//         font-weight: 500;
-//     }
-// }
-
-
-// @media(max-width: 425px) {
-//     .item {
-//         display: none;
-//     }
-// }</style>
+            & li {
+                font-size: 20px;
+            }
+        }
+    }
+}
+</style>

@@ -1,130 +1,70 @@
 <template>
     <div class="footer">
 
-        <!-- <header class="header center">
-            <div class="header__left">
-                <nav class="header__left__nav">
+        <div class="footer__bar center">
+            <div class="footer__bar__left">
+                <nav class="footer__bar__left__nav">
                     <ul>
-                        <li>
-                            <RouterLink to="/">Главная</RouterLink>
-                        </li>
-                        <li>
-                            <RouterLink to="/our-assortiment">Каталог</RouterLink>
-                        </li>
-                        <li>
-                            <RouterLink to="/about">О нас</RouterLink>
-                        </li>
-                        <li>
-                            <RouterLink to="/about-delivery">О доставке</RouterLink>
-                        </li>
-                        <li>
-                            <RouterLink to="/cart-product">Наша упаковка</RouterLink>
-                        </li>
-                        <li>
-                            <RouterLink to="/our-stores">Магазины</RouterLink>
-                        </li>
-                        <li>
-                            <RouterLink to="/contacts">Контакты</RouterLink>
+                        <li v-for="itemLinkFooter of navLinkFooter" :key="itemLinkFooter.name">
+                            <RouterLink :to="itemLinkFooter.link">{{ itemLinkFooter.name }}</RouterLink>
                         </li>
                     </ul>
                 </nav>
             </div>
-            <div class="header__rigth">
-                <div class="header__rigth__favorites">Избранное</div>
-                <RouterLink to="/basket" class="header__rigth__basket">
-                    <div class="header__rigth__basket__text">Корзина</div>
-                    <div class="header__rigth__basket__count">
-                        <p>3</p>
-                    </div>
-                </RouterLink>
-            </div>
-        </header> -->
+            <FavoriteBasketComponent></FavoriteBasketComponent>
+        </div>
 
         <FooterItem />
     </div>
 </template>
 
 <script setup>
+import FavoriteBasketComponent from './FavoriteBasketComponent.vue';
 import FooterItem from './FooterItem.vue';
 
+const navLinkFooter = [
+    { name: 'Главная', link: '/' },
+    { name: 'Каталог', link: '/our-assortiment' },
+    { name: 'О нас', link: '/about' },
+    { name: 'О доставке', link: '/about-delivery' },
+    { name: 'Наша упаковка', link: '/cart-product' },
+    { name: 'Магазины', link: '/our-stores' },
+    { name: 'Контакты', link: '/contacts' },
+]
 </script>
 
 <style lang="scss" scoped>
 .footer {
-    margin-top: 40px;
+    &__bar {
+        display: none;
+    }
 }
 
-.header {
-    display: flex;
-    padding-top: 61px;
-    padding-bottom: 47px;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+@media (min-width: 1024px) {
+    .footer {
+        margin-top: 20px;
 
-    &__left {
-        display: flex;
-        gap: 27px;
-        align-items: center;
-
-        &__nav ul {
+        &__bar {
+            width: 95%;
+            margin: 0 auto;
             display: flex;
-            gap: 41px;
-
-            // color: rgba(0, 0, 0, 0.35);
-            color: #000;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-        }
-    }
-
-    &__rigth {
-        display: flex;
-        gap: 41px;
-        align-items: center;
-
-        &__favorites {
-            color: #606060;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
-
-        &__basket {
-            display: flex;
-            border-radius: 13.368px;
-            background: rgba(254, 179, 2, 0.45);
-            width: 149px;
-            height: 53px;
-            justify-content: space-around;
+            padding: 20px 0;
+            justify-content: space-between;
             align-items: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 
-            &__text {
-                color: #FFF;
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
-
-            }
-
-            &__count {
-                width: 38px;
-                height: 39px;
-                border-radius: 10px;
-                background: #FFF;
-                align-items: center;
+            &__left {
                 display: flex;
-                justify-content: center;
+                gap: 20px;
+                align-items: center;
 
-                & p {
-                    color: #444;
-                    font-size: 18px;
+                &__nav ul {
+                    display: flex;
+                    gap: 30px;
+                    color: rgba(0, 0, 0, 0.35);
+                    font-size: 14px;
                     font-style: normal;
-                    font-weight: 700;
+                    font-weight: 400;
                     line-height: normal;
                 }
             }
@@ -132,9 +72,21 @@ import FooterItem from './FooterItem.vue';
     }
 }
 
-@media (max-width: 425px) {
-    .header {
-        display: none;
+@media (min-width: 1280px) {
+    .footer {
+        margin-top: 40px;
+
+        &__bar {
+            padding-top: 61px;
+            padding-bottom: 47px;
+
+            &__left {
+                &__nav ul {
+                    font-size: 18px;
+                }
+            }
+
+        }
     }
 }
 </style>
