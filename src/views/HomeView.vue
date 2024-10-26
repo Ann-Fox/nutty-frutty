@@ -1,5 +1,5 @@
 <template>
-  <div class="banner center bg">
+  <div class="banner bg">
 
     <div class="banner__left">
       <div class="banner__left__text">
@@ -9,8 +9,13 @@
           <br>
           Fruits
         </h1>
-        <p class="banner__left__text__tagline">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+        <p class="banner__left__text__tagline">Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+          вэб-дизайне.
           Lorem Ipsum является стандартной</p>
+      </div>
+      <div class="banner__left__imgs">
+        <img class="banner__left__imgs__img pos1" src="/images/banner-1.png" alt="" srcset="">
+        <img class="banner__left__imgs__img pos2" src="/images/banner-2.png" alt="" srcset="">
       </div>
       <div class="banner__left__search">
         <input class="banner__left__search__input" type="text" placeholder="Кешью Австралийский">
@@ -19,6 +24,7 @@
         </button>
       </div>
     </div>
+
     <div class="banner__right">
       <img class="banner__right__img-one" src="/images/banner-1.png" alt="">
       <img class="banner__right__img-two" src="/images/banner-2.png" alt="">
@@ -26,39 +32,42 @@
 
   </div>
 
-  <h2 class="header__assortiment">Наш ассортимент</h2>
+  <!-- <h2 class="header__assortiment">Наш ассортимент</h2>
   <SideBarComponentGorizontal></SideBarComponentGorizontal>
-  <AssortmentComponent />
+  <AssortmentComponent /> -->
 </template>
 
 <script setup>
-import AssortmentComponent from '../components/AssortmentComponent.vue';
+// import AssortmentComponent from '../components/AssortmentComponent.vue';
 import IconSearch from '../components/icons/IconSearch.vue';
-import SideBarComponentGorizontal from '../components/SideBarComponentGorizontal.vue'
+// import SideBarComponentGorizontal from '../components/SideBarComponentGorizontal.vue'
 </script>
 
 <style lang="scss" scoped>
+.pos2 {
+  position: absolute;
+  top: 21px;
+  left: -40px;
+}
+
 .banner {
+  padding: 0 2.5% 30px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-around;
-  padding-top: 131px;
-  padding-bottom: 178px;
+  flex-direction: column;
 
   &__left {
-    display: flex;
-    flex-direction: column;
-    max-width: 698px;
-
     &__text {
-      padding-bottom: 55px;
+      padding-bottom: 0px;
 
       &__heading {
         color: #232323;
-        font-size: 161.293px;
         font-style: normal;
+
+        font-size: 64px;
         font-weight: 900;
-        line-height: 160px;
-        letter-spacing: 4.839px;
+        line-height: 63px;
+        letter-spacing: 1.92px;
 
         &__dri {
           color: #BC5D1D;
@@ -71,148 +80,112 @@ import SideBarComponentGorizontal from '../components/SideBarComponentGorizontal
       }
 
       &__tagline {
+        max-width: 85%;
         color: #605F5F;
-        font-size: 23.7px;
         font-style: normal;
         font-weight: 300;
-        line-height: 50px;
-        /* 210.97% */
-        letter-spacing: 1px;
+        font-size: 12px;
+        line-height: 17px;
+      }
+    }
+
+    &__imgs {
+      display: flex;
+      padding: 0 0 0 30%;
+      margin: 22px 0 56px;
+
+      &__img {
+        max-width: 40%;
+        position: relative;
       }
     }
 
     &__search {
-      // max-width: 631px;
-      display: flex;
-      justify-content: start;
-      border-radius: 25px;
       background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 15px;
+      margin: 15px auto;
 
       &__input {
+        font-size: 12px;
+        font-weight: 400;
         background: none;
         border: none;
         color: #000;
-        // font-family: DM Serif Display;
-        font-size: 23.7px;
         font-style: normal;
         font-weight: 300;
         line-height: normal;
         letter-spacing: 1px;
         opacity: 0.65;
-        padding-left: 29px;
-        padding-right: 268px;
+        padding-left: 15px;
+        max-width: 80%;
       }
 
       &__btn {
-        border-radius: 25px;
+        border-radius: 15px;
+        padding: 16px;
         background: #FEB302;
-        padding: 33px;
       }
     }
   }
 
   &__right {
-    border-radius: 30.405px;
-    background: url('/images/banner-lines.png'), #BC5D1D;
-    // background: #BC5D1D;
-    min-width: 707px;
-    min-height: 749px;
-    //     border-radius: 30.405px;
-    // background: url(<path-to-image>), lightgray 0px 0px / 100% 100% no-repeat;
-    position: relative;
-    display: flex;
-    align-items: center;
-
-    &__img-one {
-      padding-left: 55px;
-    }
-
-    &__img-two {
-      position: absolute;
-      top: 290px;
-      left: 430px;
-    }
+    display: none;
   }
 }
 
-.header__assortiment {
-  margin-top: 178px;
-}
-
-@media(max-width: 425px) {
+@media(min-width: 768px) {
   .banner {
-    display: flex;
-    padding-top: 0px;
-    padding-bottom: 30px;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
 
     &__left {
       &__text {
-        padding-bottom: 0px;
-
         &__heading {
-          font-size: 64px;
-          font-weight: 900;
-          line-height: 63px;
-          letter-spacing: 1.92px;
-
-          &__ed {
-            font-weight: 300;
-          }
+          font-size: 80px;
+          margin-bottom: 20px;
         }
 
         &__tagline {
-          font-size: 12px;
-          line-height: 17px;
+          font-size: 16px;
+          line-height: 20px;
         }
       }
 
+      &__imgs {
+        display: none;
+      }
+
       &__search {
-        border-radius: 15px;
-        max-width: 288px;
-        margin: 15px auto;
-
-        &__input {
-          font-size: 12px;
-          font-weight: 400;
-          padding-left: 15px;
-          padding-right: 75px;
-        }
-
-        &__btn {
-          border-radius: 15px;
-          padding: 16px;
-        }
+        max-width: 80%;
+        margin: 50px 0;
       }
     }
 
     &__right {
-      background: none;
-      min-width: 320px;
-      min-height: 195px;
-      position: relative;
+      width: 100%;
+      background: url('/images/banner-lines.png'), #BC5D1D;
+      background-size: cover;
+      background-position: top;
+
+      border-radius: 30px;
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
 
       &__img-one {
-        padding-left: 55px;
-        width: 117px;
-        height: 194px;
+        width: 20%;
+        position: absolute;
+        top: 30%;
+        right: 20%;
       }
 
       &__img-two {
+        width: 20%;
         position: absolute;
-        top: 30px;
-        left: 135px;
-        width: 117px;
-        height: 194px;
+        top: 40%;
+        right: 5%;
       }
     }
   }
-}
-
-.header__assortiment {
-  margin-top: 43px;
 }
 </style>
