@@ -32,15 +32,18 @@
 
   </div>
 
-  <!-- <h2 class="header__assortiment">Наш ассортимент</h2>
-  <SideBarComponentGorizontal></SideBarComponentGorizontal>
-  <AssortmentComponent /> -->
+  <section class="our-assortiment">
+    <h2 class="our-assortiment__head">Наш ассортимент</h2>
+    <SideBarComponentGorizontal></SideBarComponentGorizontal>
+    <!-- <AssortmentComponent /> -->
+  </section>
+
 </template>
 
 <script setup>
 // import AssortmentComponent from '../components/AssortmentComponent.vue';
 import IconSearch from '../components/icons/IconSearch.vue';
-// import SideBarComponentGorizontal from '../components/SideBarComponentGorizontal.vue'
+import SideBarComponentGorizontal from '../components/SideBarComponentGorizontal.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -135,11 +138,32 @@ import IconSearch from '../components/icons/IconSearch.vue';
   }
 }
 
+.our-assortiment {
+  padding: 43px 2.5% 30px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  &__head {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.09px;
+    letter-spacing: 1px;
+    text-align: left;
+
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
 @media(min-width: 768px) {
   .banner {
     flex-direction: row;
+
     &__left {
       width: 50%;
+
       &__text {
         &__heading {
           font-size: 80px;
@@ -165,9 +189,9 @@ import IconSearch from '../components/icons/IconSearch.vue';
     &__right {
       position: relative;
       width: 50%;
-      background:   #BC5D1D;
+      background: #BC5D1D;
       // url('/images/banner-lines.png'), #BC5D1D; 
-     
+
       background-size: cover;
       background-position: top;
 
@@ -180,20 +204,27 @@ import IconSearch from '../components/icons/IconSearch.vue';
         // top: 15%;
         // left: 20%;
         position: absolute;
-    top: 50%;
-    left: 35%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+        top: 50%;
+        left: 35%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
       }
 
       &__img-two {
         width: 35%;
         position: absolute;
-    top: 60%;
-    left: 60%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+        top: 60%;
+        left: 60%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
       }
+    }
+  }
+
+  .our-assortiment {
+    &__head {
+      font-size: 20px;
+
     }
   }
 }
@@ -201,6 +232,7 @@ import IconSearch from '../components/icons/IconSearch.vue';
 @media(min-width: 1024px) {
   .banner {
     padding: 50px 2.5%;
+
     &__left {
       &__text {
         &__heading {
@@ -214,13 +246,24 @@ import IconSearch from '../components/icons/IconSearch.vue';
           line-height: 25px;
         }
       }
+
       &__search {
         &__input {
           font-size: 18px;
         }
+      }
     }
   }
 }
+
+@media(min-width: 1280px){
+  .our-assortiment {
+    &__head {
+      font-size: 27px;
+      line-height: 30px;
+
+    }
+  }
 }
 
 @media(min-width: 1380px) {
@@ -238,11 +281,20 @@ import IconSearch from '../components/icons/IconSearch.vue';
           line-height: 30px;
         }
       }
+
       &__search {
         &__input {
           font-size: 20px;
         }
       }
+    }
+  }
+
+  .our-assortiment {
+    &__head {
+      font-size: 60px;
+      line-height: 50px;
+
     }
   }
 }
@@ -263,11 +315,20 @@ import IconSearch from '../components/icons/IconSearch.vue';
           line-height: 50px;
         }
       }
+
       &__search {
         &__input {
           font-size: 24px;
         }
       }
+    }
+  }
+
+  .our-assortiment {
+    &__head {
+      font-size: 72px;
+      line-height: 84px;
+
     }
   }
 }

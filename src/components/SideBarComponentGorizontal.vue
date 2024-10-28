@@ -6,7 +6,6 @@
   </aside>
 </template>
 
-
 <script setup>
 const categories = [
   {
@@ -45,38 +44,56 @@ const categories = [
   ul {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
   li {
     color: #000;
-    font-size: 18px;
+    font-size: 10px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 12px;
     letter-spacing: 1px;
+    padding: 7px;
   }
 
-  li:hover {
+  li:hover, li:active {
     color: #FEB302;
     cursor: pointer;
-  }
-
-  li:active {
-    border-radius: 15px;
+    border-radius: 8px;
+    padding: 7px;
     background: #FEB302;
     color: #fff;
   }
+  
 }
 
-@media(max-width: 425px) {
+@media(min-width: 768px) {
   .sidebar {
-    ul {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-
     li {
-      font-size: 10px;
+      font-size: 16px;
+      padding: 1%;
+    }
+    li:hover, li:active {
+      padding: 1%;
+  }
+  }
+}
+@media(min-width: 1280px) {
+  .sidebar {
+    li {
+      font-size: 20px;
+      line-height: 16px;
+
+    }
+  }
+}
+@media(min-width: 1380px) {
+  .sidebar {
+    li {
+      font-size: 24px;
+      line-height: 18px;
 
     }
   }
