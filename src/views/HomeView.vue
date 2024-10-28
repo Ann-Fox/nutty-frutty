@@ -35,13 +35,13 @@
   <section class="our-assortiment">
     <h2 class="our-assortiment__head">Наш ассортимент</h2>
     <SideBarComponentGorizontal></SideBarComponentGorizontal>
-    <!-- <AssortmentComponent /> -->
+    <AssortmentComponent />
   </section>
 
 </template>
 
 <script setup>
-// import AssortmentComponent from '../components/AssortmentComponent.vue';
+import AssortmentComponent from '../components/AssortmentComponent.vue';
 import IconSearch from '../components/icons/IconSearch.vue';
 import SideBarComponentGorizontal from '../components/SideBarComponentGorizontal.vue'
 </script>

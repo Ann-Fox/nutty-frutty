@@ -98,26 +98,26 @@ const products = [
 
 <style lang="scss" scoped>
 .assortiment {
-    margin: 178px auto 90px;
+    // margin: 178px auto 90px;
 }
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 26px;
-    grid-row-gap: 54px;
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
+    // grid-column-gap: 26px;
+    // grid-row-gap: 54px;
 }
 
-@media (max-width: 425px) {
-    .assortiment {
-        margin: 31px auto 69px;
-    }
+// @media (max-width: 425px) {
+//     .assortiment {
+//         margin: 31px auto 69px;
+//     }
 
-    .cards {
-        grid-template-columns: repeat(1, 1fr);
-        grid-row-gap: 42px;
-    }
+//     .cards {
+//         grid-template-columns: repeat(1, 1fr);
+//         grid-row-gap: 42px;
+//     }
 
-}
+// }
 </style>
