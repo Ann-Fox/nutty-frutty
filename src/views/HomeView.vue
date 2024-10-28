@@ -138,9 +138,8 @@ import IconSearch from '../components/icons/IconSearch.vue';
 @media(min-width: 768px) {
   .banner {
     flex-direction: row;
-    justify-content: space-around;
-
     &__left {
+      width: 50%;
       &__text {
         &__heading {
           font-size: 80px;
@@ -164,8 +163,11 @@ import IconSearch from '../components/icons/IconSearch.vue';
     }
 
     &__right {
-      width: 100%;
-      background: url('/images/banner-lines.png'), #BC5D1D;
+      position: relative;
+      width: 50%;
+      background:   #BC5D1D;
+      // url('/images/banner-lines.png'), #BC5D1D; 
+     
       background-size: cover;
       background-position: top;
 
@@ -173,17 +175,98 @@ import IconSearch from '../components/icons/IconSearch.vue';
       display: flex;
 
       &__img-one {
-        width: 20%;
+        width: 35%;
+        // position: absolute;
+        // top: 15%;
+        // left: 20%;
         position: absolute;
-        top: 30%;
-        right: 20%;
+    top: 50%;
+    left: 35%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
       }
 
       &__img-two {
-        width: 20%;
+        width: 35%;
         position: absolute;
-        top: 40%;
-        right: 5%;
+    top: 60%;
+    left: 60%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+@media(min-width: 1024px) {
+  .banner {
+    padding: 50px 2.5%;
+    &__left {
+      &__text {
+        &__heading {
+          font-size: 100px;
+          margin-bottom: 30px;
+          line-height: 83px;
+        }
+
+        &__tagline {
+          font-size: 20px;
+          line-height: 25px;
+        }
+      }
+      &__search {
+        &__input {
+          font-size: 18px;
+        }
+    }
+  }
+}
+}
+
+@media(min-width: 1380px) {
+  .banner {
+    &__left {
+      &__text {
+        &__heading {
+          font-size: 120px;
+          margin-bottom: 30px;
+          line-height: 103px;
+        }
+
+        &__tagline {
+          font-size: 24px;
+          line-height: 30px;
+        }
+      }
+      &__search {
+        &__input {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media(min-width: 1536px) {
+  .banner {
+    // padding: 40px 5%; //по макету 100px 
+    &__left {
+      &__text {
+        &__heading {
+          font-size: 160px;
+          margin-bottom: 40px;
+          line-height: 160px;
+        }
+
+        &__tagline {
+          font-size: 28px;
+          line-height: 50px;
+        }
+      }
+      &__search {
+        &__input {
+          font-size: 24px;
+        }
       }
     }
   }
