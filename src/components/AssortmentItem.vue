@@ -1,6 +1,5 @@
 <template>
     <div class="card bg">
-        <!-- <div class="card bg" v-for="product in products" :key="product.id"> -->
         <div class="card__img">
             <img :src="urlProduct" :alt="nameProduct" />
         </div>
@@ -85,7 +84,6 @@ const addMe = () => {
 .card {
     width: 95%;
     border-radius: 27px;
-    // padding: 15px 15px 30px;
     padding: 3.5% 3.5% 7%;
     margin: 0 auto;
 
@@ -183,4 +181,79 @@ const addMe = () => {
     }
 }
 
+@media(min-width: 425px) {
+    .card {
+        &__info {
+            &__head {
+                font-size: 18px;
+            }
+
+            &__description {
+                font-size: 14px;
+            }
+
+            &__price {
+                p {
+                    font-size: 18px;
+                }
+            }
+
+            &__btns {
+                &__icons {
+                    &__icon {
+                        height: 50px;
+                    }
+                }
+
+                &__basket {
+                    padding: 16px 14px;
+                    font-size: 16px;
+                }
+
+            }
+
+        }
+    }
+}
+
+@media(min-width: 425px) {
+    .card {
+        width: 100%;
+        &__info {
+            &__btns {
+                &__icons {
+                    &__icon {
+                        height: 54px;
+                    }
+                }
+
+                &__basket {
+                    padding: 18px 0px;
+                }
+
+            }
+
+        }
+    }
+}
+@media(min-width: 425px) {
+    .card {
+        width: 100%;
+        &__info {
+            &__head {
+                font-size: 20px;
+            }
+
+            &__description {
+                font-size: 16px;
+            }
+
+            &__price {
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
 </style>
