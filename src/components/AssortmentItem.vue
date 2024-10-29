@@ -13,16 +13,20 @@
                 <p class="card__info__price__old">От {{ priceOldProduct }} Р</p>
             </div>
             <div class="card__info__btns">
-                <button>
-                    <IconArrows></IconArrows>
-                </button>
-                <button>
-                    <IconSearchSmall></IconSearchSmall>
-                </button>
-                <button>
-                    <IconFaivorites></IconFaivorites>
-                </button>
-                <button @click="addMe">В корзину</button>
+
+                <div class="card__info__btns__icons">
+                    <button class="card__info__btns__icons__icon">
+                        <IconArrows></IconArrows>
+                    </button>
+                    <button class="card__info__btns__icons__icon">
+                        <IconSearchSmall></IconSearchSmall>
+                    </button>
+                    <button class="card__info__btns__icons__icon">
+                        <IconFaivorites></IconFaivorites>
+                    </button>
+                </div>
+
+                <button class="card__info__btns__basket" @click="addMe">В корзину</button>
             </div>
         </div>
     </div>
@@ -79,19 +83,18 @@ const addMe = () => {
 
 <style lang="scss" scoped>
 .card {
-    width: 90%;
+    width: 95%;
     border-radius: 27px;
     // padding: 15px 15px 30px;
-    padding: 2%;
+    padding: 3.5% 3.5% 7%;
     margin: 0 auto;
-    overflow: hidden;
-    gap: 42px;
-
 
     &__img {
-        // margin-bottom: 23px;
-        // width: 100%;
-        // height: 100%;
+        margin-bottom: 23px;
+
+        img {
+            width: 100%;
+        }
     }
 
     &__info {
@@ -116,12 +119,15 @@ const addMe = () => {
         }
 
         &__price {
-            font-size: 16px;
-            font-style: normal;
-            line-height: 23.171px;
-            /* 144.444% */
-            letter-spacing: 0.891px;
-            // margin-bottom: 31px;
+            p {
+                font-size: 16px;
+                font-style: normal;
+                line-height: 23.171px;
+                /* 144.444% */
+                letter-spacing: 0.891px;
+            }
+
+            margin-bottom: 31px;
             display: flex;
             gap: 21px;
 
@@ -141,75 +147,40 @@ const addMe = () => {
             align-items: center;
             display: flex;
             justify-content: space-between;
+            gap: 10px;
 
             & button {
-                border-radius: 13.368px;
-                background-color: #e6eaf3;
-                // width: 55.254px;
-                // height: 55.254px;
+                border-radius: 8px;
+            }
 
-                &:last-child {
-                    background-color: #FEB302;
-                    // width: 184.477px;
-                    // height: 55.254px;
+            &__icons {
+                width: 60%;
+                display: flex;
+                justify-content: space-between;
 
-                    color: #FFF;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: normal;
-                    letter-spacing: 0.891px;
+                &__icon {
+                    background-color: #e6eaf3;
+                    width: 30%;
+                    height: 40px;
                 }
             }
+
+            &__basket {
+                background-color: #FEB302;
+                padding: 12px 14px;
+                width: 40%;
+
+                color: #FFF;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 0.891px;
+            }
+
         }
 
     }
 }
 
-// @media(max-width: 425px) {
-//     .card {
-//         border-radius: 26.736px;
-//         padding: 11px 11px 22px;
-
-//         &__img {
-//             margin-bottom: 16px;
-
-//             & img {
-//                 width: 285.187px;
-//                 height: 293.829px;
-//             }
-//         }
-
-//         &__info {
-//             &__head {
-//                 font-size: 16px;
-//                 margin-bottom: 10px;
-//             }
-
-//             &__description {
-//                 font-size: 12px;
-//                 margin-bottom: 10px;
-//             }
-
-//             &__price {
-//                 margin-bottom: 23px;
-//             }
-
-//             &__btns {
-//                 & button {
-//                     border-radius: 13.368px;
-//                     background-color: #e6eaf3;
-//                     width: 42px;
-//                     height: 42px;
-
-//                     &:last-child {
-//                         width: 138.577px;
-//                         height: 42px;
-//                         font-size: 14px;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
 </style>

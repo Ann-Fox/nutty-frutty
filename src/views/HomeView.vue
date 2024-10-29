@@ -143,6 +143,7 @@ import SideBarComponentGorizontal from '../components/SideBarComponentGorizontal
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  gap: 30px;
 
   &__head {
     font-family: Roboto;
@@ -152,7 +153,7 @@ import SideBarComponentGorizontal from '../components/SideBarComponentGorizontal
     letter-spacing: 1px;
     text-align: left;
 
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     text-align: center;
   }
 }
