@@ -12,11 +12,9 @@
 </template>
     
 <style lang="scss" scoped>
-
-@media(max-width: 425px) {
     svg {
-        width: 320px;
-        height: 114px;
+        width: 80%;
+        max-width: 1120px;
+        height: auto;
     }
-}
 </style>
