@@ -2,7 +2,8 @@
   <div class="bg">
     <div class="about">
       <h2>{{ props.title }}</h2>
-      <p>{{ props.text }}
+      <slot class="slot-store" v-if="props.title === 'Наши магазины'"></slot>
+      <p v-else>{{ props.text }}
       </p>
       <LogoMainBig />
     </div>
@@ -21,11 +22,14 @@ const props = defineProps({
     type: String,
     default: 'primary'
   },
-  
 })
 </script>
 
 <style lang="scss" scoped>
+// .slot-store {
+//   margin: 32px 0 46px;
+
+// }
 p {
   color: #252525;
   font-size: 12px;
