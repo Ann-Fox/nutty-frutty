@@ -1,0 +1,1 @@
+import{_ as s,o as t,b as o,p as _,i as c,a}from"./index-2d2edb30.js";const n=e=>(_("data-v-85fff4c1"),e=e(),c(),e),r={class:"assortiment center"},p=n(()=>a("h2",null,"Наш ассортимент",-1)),i=[p],d={__name:"OurAssortimentView",setup(e){return(f,u)=>(t(),o("div",r,i))}},m=s(d,[["__scopeId","data-v-85fff4c1"]]);export{m as default};
