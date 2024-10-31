@@ -1,7 +1,7 @@
 <template>
   <div class="bg">
     <div class="about">
-      <h2>{{ props.title }}</h2>
+      <h2 class="about__title">{{ props.title }}</h2>
       <slot class="slot-store" v-if="props.title === 'Наши магазины'"></slot>
       <p v-else>{{ props.text }}
       </p>
@@ -26,10 +26,6 @@ const props = defineProps({
 </script>
 
 <style lang="scss" scoped>
-// .slot-store {
-//   margin: 32px 0 46px;
-
-// }
 p {
   color: #252525;
   font-size: 12px;
@@ -46,6 +42,10 @@ p {
   padding: 10px 0 30px;
   flex-direction: column;
   text-align: center;
+
+  &__title {
+    font-size: 36px;
+  }
 }
 
 @media(min-width: 768px) {
@@ -53,11 +53,13 @@ p {
     font-size: 14px;
     line-height: 30px;
     text-align: justify;
-
   }
 
   .about {
-    font-style: 42px;
+    &__title {
+      font-size: 42px;
+      line-height: 54px;
+    }
   }
 }
 
@@ -68,12 +70,15 @@ p {
   }
 
   .about {
-    font-style: 56px;
+    &__title {
+      font-size: 56px;
+      line-height: 68px;
+    }
+    
   }
 }
 
 @media(min-width: 1280px) {
-
   p {
     font-size: 23px;
     line-height: 50px;
@@ -81,7 +86,10 @@ p {
 
   .about {
     width: 80%;
-    font-style: 72px;
+    &__title {
+      font-size: 72px;
+      line-height: 84px;
+    }
   }
 }
 </style>

@@ -1,25 +1,18 @@
 <template>
   <ViewComponent :title="'Наши магазины'">
-    <!-- <div class="about center bg">
-    <h2>Наши магазины</h2> -->
     <div class="store">
       <div class="store__item" v-for="store in stores" :key="store.id">
         <div class="store__item__img">
-          <!-- <img :src="store.imgUrl" alt="store"> -->
+          <img :src="store.imgUrl" alt="store">
         </div>
         <p class="store__item__content">{{ store.text }}</p>
       </div>
-      </div>
-    <!-- </div>
-
-    <LogoMainBig />
-  </div> -->
+    </div>
   </ViewComponent>
- 
+
 </template>
 
 <script setup>
-// import LogoMainBig from '../components/icons/LogoMainBig.vue';
 import ViewComponent from './ViewComponent.vue';
 
 const stores = [
@@ -35,65 +28,99 @@ const stores = [
 </script>
 
 <style lang="scss" scoped>
-// .about {
-//   padding: 42px 144px 143px;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   max-width: 1632px;
-//   gap: 35px;
-// }
-
 .store {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  // grid-column-gap: 0px;
-  // grid-row-gap: 75px;
+  margin-top: 20px;
 
-  // margin: 75px 0;
-}
+  &__item {
+    display: flex;
+    flex-direction: column;
 
-.store__item {
-  display: flex;
-  gap: 76px;
+    &__img img {
+      width: 100%;
+      border-radius: 8px;
+    }
 
-  &__img {
-    // width: 493px;
-    // height: 300px;
-
-    // border-radius: 25px;
-    // background: #C4C4C4;
-  }
-
-  &__content {
-    // width: 1024px;
+    p {
+      color: #252525;
+      font-size: 12px;
+      line-height: 25px;
+      margin: 18px 0 43px;
+    }
   }
 }
 
-// @media(max-width: 425px) {
-//   .about {
-//     padding: 0 15px;
-//     gap: 0;
-//   }
+@media(min-width: 768px) {
+  .store {
+    &__item {
+      flex-direction: row;
+      gap: 12px;
+      margin: 0 0 43px;
 
-//   .store {
-//     margin: 30px 0 60px;
-//   }
+      p {
+        margin: 0;
+        text-align: justify;
+      }
+    }
+  }
+}
 
-//   .store__item {
-//     gap: 18px;
-//     flex-wrap: wrap;
-//     justify-content: center;
+@media(min-width: 1024px) {
+  .store {
+    margin-top: 35px;
 
-//     &__img {
-//       width: 253px;
-//       height: 154px;
-//     }
+    &__item {
+      gap: 16px;
 
-//     &__content {
-//       width: 293px;
-//     }
-//   }
-// }
+      p {
+        font-size: 16px;
+        line-height: 34px;
+      }
+    }
+  }
+}
+
+@media(min-width: 1280px) {
+  .store {
+    margin-top: 55px;
+    justify-content: space-between;
+
+    &__item {
+      gap: 24px;
+
+      &__img {
+        width: 40%;
+      }
+
+      p {
+        width: 60%;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media(min-width: 1360px) {
+  .store {
+    margin-top: 65px;
+
+    &__item {
+      p {
+        line-height: 36px;
+      }
+    }
+  }
+}
+
+@media(min-width: 1360px) {
+  .store {
+    margin-top: 75px;
+
+    &__item {
+      p {
+        font-size: 23px;
+        line-height: 40px;
+      }
+    }
+  }
+}
 </style>

@@ -2,7 +2,7 @@
   <div class="assortiment center">
     <h2>Наш ассортимент</h2>
 
-    <div class="assortiment__all">
+    <!-- <div class="assortiment__all">
      
       <SideBarComponent></SideBarComponent>
 
@@ -28,16 +28,16 @@
           <NumberPageComponent></NumberPageComponent>
         </div>
       </div>
-    </div>
+    </div> -->
 
   </div>
 </template>
 
 <script setup>
-import SideBarComponent from '../components/SideBarComponent.vue';
-import NumberPageComponent from '../components/NumberPageComponent.vue'
-import AssortmentItem from '../components/AssortmentItem.vue';
-import IconSearch from '../components/icons/IconSearch.vue';
+//import SideBarComponent from '../components/SideBarComponent.vue';
+//import NumberPageComponent from '../components/NumberPageComponent.vue'
+//import AssortmentItem from '../components/AssortmentItem.vue';
+//import IconSearch from '../components/icons/IconSearch.vue';
 </script>
 
 <style lang="scss" scoped>
